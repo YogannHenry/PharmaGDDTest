@@ -1,0 +1,3 @@
+{# templates/bundles/SyliusAdminBundle/Customer/Grid/Field/newsletter.html.twig #}
+{% import '@SyliusUi/Macro/subscribedToNewsletter.html.twig' as newsletter %}
+{{ newsletter.yesNo(data.user.subscribedToNewsletter|default(false)) }}

@@ -1,0 +1,24 @@
+
+{% macro yesNo(value) %}
+    {% import _self as newsletter %}
+
+    {% if value %}
+        {{ newsletter.yes() }}
+    {% else %}
+        {{ newsletter.no() }}
+    {% endif %}
+{% endmacro %}
+
+{% macro yes() %}
+    <span class="ui basic label">
+        <i class="checkmark icon"></i>
+        {{ 'sylius.ui.yes_label'|trans }}
+    </span>
+{% endmacro %}
+
+{% macro no() %}
+    <span class="ui basic label">
+        <i class="remove icon"></i>
+        {{ 'sylius.ui.no_label'|trans }}
+    </span>
+{% endmacro %}
