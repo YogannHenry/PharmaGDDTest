@@ -15,4 +15,13 @@ use Sylius\Component\Core\Model\ShopUser as BaseShopUser;
 #[ORM\Table(name: 'sylius_shop_user')]
 class ShopUser extends BaseShopUser
 {
+     /**
+     * @ORM\Column(type="boolean")
+     */
+    protected $subscribedToNewsletter = false;
+
+    public function isSubscribedToNewsletter(): bool
+    {
+        return $this->subscribedToNewsletter;
+    }
 }
